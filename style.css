@@ -30,7 +30,7 @@
   text-decoration: none;
 }
 
-
+/* Poprawki dla menu */
 .menu {
   margin-top: 12px;
   margin-left: 12px;
@@ -72,12 +72,11 @@
   font-size: 40px;
   color: white;
   margin-left: 20px;
-  background-color: black;
   border: none;
 }
 .logo:hover {
   
-  color: #96ffe0;
+  color: #787878;
 }
 
 /* Poprawka dla wrapper, by dodać przestrzeń nad treścią */
@@ -452,6 +451,21 @@ teksty {
   
   
 }
+
+.role-trial {
+  color: #0068ab;
+  background-color: #84bee3;
+  border-radius: 7px;
+  border: #0068ab 1px solid;
+  font-size: 15px;
+  width: 70px;
+  text-align: center;
+  padding: 0.5px;
+  
+  
+  
+  
+}
 .discordpage {
   
   background: rgba(95, 95, 95, 0.78);
@@ -506,7 +520,7 @@ a {
   
 }
 a:hover {
-  color: blue;
+  color: #787878;
   
   
   
@@ -538,7 +552,17 @@ a:hover {
   
   
   
+  
 }
+
+.brdr {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  
+  
+}
+
 
 .aboutus {
   width: 70%;
