@@ -1,109 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="ONCODE" />
-    <meta property="og:description" content="Oncode developers website. Check it out" />
-    <link rel="icon" href="https://i.imgur.com/YzYUEbw.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Lato:wght@400;900&family=Lilita+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oncode | Discord & Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
 
-  <body>
-
-    <div class="menu">
-      <div class="logo">ONCODE</div>
-      <a class="menu-link" href="https://discord.gg/TYQWQcCWSn">Discord</a>
-    </div>
- 
-    <div class="abcd">
-      <div class="content"> 
-        <h2>Your Website. Your Way.</h2>
-        <p class="aboutus">
-          OnCode creates modern websites and web applications. We specialize in programming, designing, and optimizing sites tailored to each client's needs.
-        </p>
-        <a class="sprawdz" target="_top" onClick="document.getElementById('tm').scrollIntoView({ behavior: 'smooth' });">ONCODE Team</a>
-        <a class="sprawdz" target="_top" onClick="document.getElementById('cnt').scrollIntoView({ behavior: 'smooth' });">Contact Us</a>
-      </div>
-    </div>
-
-    
-   <div class="vdo"></div>
-      <video autoplay muted loop id="bg-video">
-        <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    
-
-    </div>
-    
-    <div class="container">
-      <div class="gradient"></div>
-      
-      <div class="contact">
-        <div id="cnt" />
-        <div class="header">
-          Contact Us
+    <nav class="navbar">
+        <div class="logo">on<span>code</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" class="nav-community">Our Discord</a>
         </div>
-        <p class="email">
-          📧 Email: <strong>contact.oncode@gmail.com</strong>
+        <button id="loginBtn" class="login-button" onclick="handleLogin()">
+            <i class="fab fa-discord"></i> Login
+        </button>
+    </nav>
 
-        </p>
-        <p class="email">
-
-          🔵 Discord: <a href="https://discord.gg/NzXQh6ECt4">https://discord.gg/NzXQh6ECt4</a>
-        </p>
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="copyright">
-          Copyright © 2025 ONCODE
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Expert Solutions for <span class="gradient-text">Communities</span></h1>
+            <p>High-quality Discord server setups and modern web development. Join oncode and build your future today.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn-main">View Offer</a>
+                <a href="https://discord.gg/mFud5YcqQY" target="_blank" class="btn-alt"><i class="fab fa-discord"></i> Join Community</a>
+            </div>
         </div>
-  </body>
-  
+    </header>
 
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Expertise</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <i class="fab fa-discord"></i>
+                <h3>Server Architecture</h3>
+                <p>From zero to professional. Permissions, channels, and roles optimized for growth.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Web Design</h3>
+                <p>Clean, modern, and fast websites. Perfect for showcasing your business or project.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-gears"></i>
+                <h3>Custom Systems</h3>
+                <p>Advanced webhook integrations and security setups to keep your data safe.</p>
+            </div>
+        </div>
+    </section>
 
+    <section id="contact" class="contact">
+        <div class="contact-box">
+            <h2>Start a Project</h2>
+            <p>Send a message directly to our Discord staff.</p>
+            <form id="contactForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <textarea id="userMessage" rows="5" placeholder="Tell us about your project..." required></textarea>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
+            </form>
+            <div id="formStatus" class="status-msg"></div>
+        </div>
+    </section>
 
+    <footer>
+        <p>&copy; 2026 oncode. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
-
